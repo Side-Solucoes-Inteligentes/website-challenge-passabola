@@ -76,12 +76,12 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero Section with Video Background */}
-        <section id="home" className="relative h-screen flex items-center">
+        <section id="home" className="relative h-screen flex items-center overflow-hidden">
           {/* Video Background (using image as placeholder) */}
 
-<div className="absolute inset-0 z-0 overflow-hidden">
+<div className="absolute inset-0 z-0 overflow-hidden w-full h-full">
   <video
-    className="object-cover w-full h-full"
+    className="absolute inset-0 object-cover w-full h-full"
     autoPlay
     muted
     loop
