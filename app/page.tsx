@@ -65,8 +65,8 @@ export default function Home() {
                     <ShoppingBag className="h-5 w-5" />
                     <span className="text-sm font-medium">Loja</span>
                 </Link>
-                {/* Mobile Menu Trigger */}
-                <div className="md:hidden">
+                {/* Mobile Menu Trigger - now explicitly on the right */}
+                <div className="md:hidden flex justify-end w-full">
                     <MobileMenu />
                 </div>
             </div>
