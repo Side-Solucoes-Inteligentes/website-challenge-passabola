@@ -22,7 +22,10 @@ export function MobileMenu() {
           <span className="sr-only">Abrir menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-full max-w-xs bg-background p-0 border-0">
+      <SheetContent 
+        side="left" 
+        className="w-full max-w-xs bg-background p-0 !border-0 !border-r-0 !border-l-0 !shadow-none"
+      >
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-4 border-b">
             <Link href="#home" className="flex items-center gap-2">
