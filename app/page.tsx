@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge"
 import { ScrollAnimation } from "@/components/animations/ScrollAnimation"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
+import { MobileMenu } from "@/components/ui/mobile-menu"
 import {
   ChevronRight,
   ShoppingBag,
@@ -38,6 +39,7 @@ export default function Home() {
       <header className="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b">
         <div className="container mx-auto px-4 py-3">
           <div className="grid grid-cols-3 items-center">
+            {/* Left: Logo */}
             <div className="flex justify-start">
               <Link href="#home" className="flex items-center gap-2">
                 <div className="relative h-10 w-10 md:h-12 md:w-12">
@@ -47,54 +49,26 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Desktop Navigation */}
+            {/* Center: Desktop Navigation */}
             <nav className="hidden md:flex items-center justify-center space-x-8">
-              <Link
-                href="#home"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap"
-              >
-                Home
-                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-              <Link
-                href="#jogue"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap"
-              >
-                Jogue com a gente
-                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-              <Link
-                href="#duvidas"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap"
-              >
-                Dúvidas
-                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-              <Link
-                href="#contato"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap"
-              >
-                Contato
-                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-              <Link
-                href="#quem-somos"
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap"
-              >
-                Quem somos
-                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
-              </Link>
+              <Link href="#home" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Home<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
+              <Link href="#jogue" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Jogue com a gente<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
+              <Link href="#duvidas" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Dúvidas<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
+              <Link href="#contato" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Contato<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
+              <Link href="#quem-somos" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Quem somos<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
             </nav>
 
-            <div className="flex items-center justify-end gap-3">
-              <Link
-                href="#loja"
-                className="hidden md:flex items-center gap-1 text-primary hover:text-pink-500 transition-colors"
-              >
-                <ShoppingBag className="h-5 w-5" />
-                <span className="text-sm font-medium">Loja</span>
-              </Link>
-              <MobileMenu />
+            {/* Right: Actions (Loja on Desktop, Menu on Mobile) */}
+            <div className="flex justify-end">
+                {/* Desktop Store Link */}
+                <Link href="#loja" className="hidden md:flex items-center gap-1 text-primary hover:text-pink-500 transition-colors">
+                    <ShoppingBag className="h-5 w-5" />
+                    <span className="text-sm font-medium">Loja</span>
+                </Link>
+                {/* Mobile Menu Trigger */}
+                <div className="md:hidden">
+                    <MobileMenu />
+                </div>
             </div>
           </div>
         </div>
@@ -1040,52 +1014,5 @@ function ProductCarousel() {
       <CarouselPrevious className="absolute left-[-50px] top-1/2 -translate-y-1/2 hidden md:flex" />
       <CarouselNext className="absolute right-[-50px] top-1/2 -translate-y-1/2 hidden md:flex" />
     </Carousel>
-  )
-}
-
-// Mobile Menu Component
-function MobileMenu() {
-  const navLinks = [
-    { href: "#home", text: "Home" },
-    { href: "#jogue", text: "Jogue com a gente" },
-    { href: "#quem-somos", text: "Quem somos" },
-    { href: "#loja", text: "Loja" },
-    { href: "#duvidas", text: "Dúvidas" },
-    { href: "#contato", text: "Contato" },
-  ]
-
-  return (
-    <div className="md:hidden">
-      <Sheet>
-        <SheetTrigger asChild>
-          <Button variant="ghost" size="sm" className="text-primary">
-            <Menu className="h-6 w-6" />
-            <span className="sr-only">Abrir menu</span>
-          </Button>
-        </SheetTrigger>
-        <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-white p-0">
-          <div className="p-6">
-            <Link href="#home" className="flex items-center gap-2 mb-8">
-              <div className="relative h-10 w-10">
-                <Image src="/logo.png" alt="Passa Bola Logo" fill className="object-contain" />
-              </div>
-              <span className="font-bold text-xl text-primary">PASSA BOLA</span>
-            </Link>
-            <nav className="flex flex-col space-y-2">
-              {navLinks.map((link) => (
-                <SheetClose key={link.href} asChild>
-                  <Link
-                    href={link.href}
-                    className="text-lg font-medium text-gray-700 hover:text-primary hover:bg-gray-100 p-3 rounded-md transition-colors"
-                  >
-                    {link.text}
-                  </Link>
-                </SheetClose>
-              ))}
-            </nav>
-          </div>
-        </SheetContent>
-      </Sheet>
-    </div>
   )
 }
