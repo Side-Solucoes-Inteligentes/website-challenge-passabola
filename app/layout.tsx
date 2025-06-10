@@ -21,10 +21,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR">
-      <body className={inter.className}>
+    <html lang="pt-BR" className="overflow-x-hidden w-full">
+      <body className={`${inter.className} overflow-x-hidden max-w-[100vw] w-full m-0 p-0`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          {children}
+          <div className="overflow-x-hidden w-full">
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>

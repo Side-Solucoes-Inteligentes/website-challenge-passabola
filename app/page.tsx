@@ -76,12 +76,13 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero Section with Video Background */}
-        <section id="home" className="relative h-screen flex items-center overflow-hidden">
+        <section id="home" className="relative h-screen flex items-center overflow-hidden w-full">
           {/* Video Background (using image as placeholder) */}
 
-<div className="absolute inset-0 z-0 overflow-hidden w-full h-full">
+<div className="absolute inset-0 z-0 overflow-hidden w-full h-full left-0 right-0">
   <video
-    className="absolute inset-0 object-cover w-full h-full"
+    className="absolute inset-0 object-cover w-[100vw] h-full left-0 right-0"
+    style={{ width: '100vw', maxWidth: '100vw', objectFit: 'cover' }}
     autoPlay
     muted
     loop
