@@ -17,7 +17,7 @@ export function MobileMenu() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline" size="icon" className="ml-auto">
+        <Button variant="outline" size="icon">
           <Menu className="h-8 w-8" />
           <span className="sr-only">Abrir menu</span>
         </Button>

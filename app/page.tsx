@@ -66,7 +66,7 @@ export default function Home() {
                     <span className="text-sm font-medium">Loja</span>
                 </Link>
                 {/* Mobile Menu Trigger - positioned at the far right */}
-                <div className="md:hidden flex items-center ml-auto">
+                <div className="md:hidden flex items-center">
                     <MobileMenu />
                 </div>
             </div>
