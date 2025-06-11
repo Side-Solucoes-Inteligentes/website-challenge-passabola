@@ -14,6 +14,22 @@ import {
 } from "lucide-react"
 
 export function MobileMenu() {
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const targetId = e.currentTarget.href.split("#")[1]
+    const targetElement = document.getElementById(targetId)
+    if (targetElement) {
+      const sheetClose = e.currentTarget.closest('[data-radix-collection-item]')?.parentElement?.previousElementSibling as HTMLButtonElement | null;
+      if (sheetClose) {
+        sheetClose.click();
+      }
+      
+      setTimeout(() => {
+        targetElement.scrollIntoView({ behavior: "smooth" })
+      }, 250);
+    }
+  }
+
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -42,22 +58,22 @@ export function MobileMenu() {
           </div>
           <nav className="flex-1 flex flex-col items-center justify-center gap-8 text-lg font-medium p-4">
             <SheetClose asChild>
-              <Link href="#home" className="hover:text-primary transition-colors">Home</Link>
+              <Link onClick={handleSmoothScroll} href="#home" className="hover:text-primary transition-colors">Home</Link>
             </SheetClose>
             <SheetClose asChild>
-              <Link href="#jogue" className="hover:text-primary transition-colors">Jogue com a gente</Link>
+              <Link onClick={handleSmoothScroll} href="#jogue" className="hover:text-primary transition-colors">Jogue com a gente</Link>
             </SheetClose>
             <SheetClose asChild>
-              <Link href="#duvidas" className="hover:text-primary transition-colors">Dúvidas</Link>
+              <Link onClick={handleSmoothScroll} href="#duvidas" className="hover:text-primary transition-colors">Dúvidas</Link>
             </SheetClose>
             <SheetClose asChild>
-              <Link href="#contato" className="hover:text-primary transition-colors">Contato</Link>
+              <Link onClick={handleSmoothScroll} href="#contato" className="hover:text-primary transition-colors">Contato</Link>
             </SheetClose>
             <SheetClose asChild>
-              <Link href="#quem-somos" className="hover:text-primary transition-colors">Quem somos</Link>
+              <Link onClick={handleSmoothScroll} href="#quem-somos" className="hover:text-primary transition-colors">Quem somos</Link>
             </SheetClose>
              <SheetClose asChild>
-              <Link href="#loja" className="flex items-center gap-2 hover:text-primary transition-colors">
+              <Link onClick={handleSmoothScroll} href="#loja" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <ShoppingBag className="h-5 w-5" /> Loja
               </Link>
             </SheetClose>

@@ -33,6 +33,15 @@ const bebasNeue = Bebas_Neue({
 })
 
 export default function Home() {
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    const targetId = e.currentTarget.href.split("#")[1]
+    const targetElement = document.getElementById(targetId)
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <div className="flex min-h-screen flex-col">
       {/* Header */}
@@ -51,17 +60,17 @@ export default function Home() {
 
             {/* Center: Desktop Navigation */}
             <nav className="hidden md:flex items-center justify-center space-x-8">
-              <Link href="#home" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Home<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
-              <Link href="#jogue" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Jogue com a gente<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
-              <Link href="#duvidas" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Dúvidas<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
-              <Link href="#contato" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Contato<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
-              <Link href="#quem-somos" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Quem somos<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
+              <Link onClick={handleSmoothScroll} href="#home" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Home<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
+              <Link onClick={handleSmoothScroll} href="#jogue" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Jogue com a gente<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
+              <Link onClick={handleSmoothScroll} href="#duvidas" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Dúvidas<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
+              <Link onClick={handleSmoothScroll} href="#contato" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Contato<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
+              <Link onClick={handleSmoothScroll} href="#quem-somos" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Quem somos<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
             </nav>
 
             {/* Right: Actions (Loja on Desktop, Menu on Mobile) */}
             <div className="flex justify-end">
                 {/* Desktop Store Link */}
-                <Link href="#loja" className="hidden md:flex items-center gap-1 text-primary hover:text-pink-500 transition-colors">
+                <Link onClick={handleSmoothScroll} href="#loja" className="hidden md:flex items-center gap-1 text-primary hover:text-pink-500 transition-colors">
                     <ShoppingBag className="h-5 w-5" />
                     <span className="text-sm font-medium">Loja</span>
                 </Link>
