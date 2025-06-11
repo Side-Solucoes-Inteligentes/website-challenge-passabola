@@ -80,16 +80,6 @@ export default function Home() {
           {/* Video Background (using image as placeholder) */}
 
 <div className="absolute inset-0 z-0 overflow-hidden w-full h-full left-0 right-0">
-  {/* Imagem de fallback para caso o vídeo não carregue */}
-  <div 
-    className="absolute inset-0" 
-    style={{ 
-      backgroundImage: 'url(/image_1.png)', 
-      backgroundSize: 'cover', 
-      backgroundPosition: 'center' 
-    }} 
-  />
-  
   <video
     className="absolute inset-0 object-cover w-[100vw] h-full left-0 right-0"
     style={{ width: '100vw', maxWidth: '100vw', objectFit: 'cover' }}
@@ -97,11 +87,8 @@ export default function Home() {
     muted
     loop
     playsInline
-    preload="auto"
-    poster="/image_1.png"
   >
-    <source src="/futebol.webm" type="video/webm" />
-    <source src="https://stratfy.github.io/website-challenge-passabola/public/futebol.webm" type="video/webm" />
+    <source src="/futebol.mp4" type="video/mp4" />
     Seu navegador não suporta vídeo em background.
   </video>
   <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent"></div>
