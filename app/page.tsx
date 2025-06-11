@@ -11,6 +11,7 @@ import { ScrollAnimation } from "@/components/animations/ScrollAnimation"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
 import { MobileMenu } from "@/components/ui/mobile-menu"
+import { ThemeToggleButton } from "@/components/ui/theme-toggle-button"
 import {
   ChevronRight,
   ShoppingBag,
@@ -43,9 +44,9 @@ export default function Home() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-background">
       {/* Header */}
-      <header className="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b">
+      <header className="fixed w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b dark:border-slate-800">
         <div className="container mx-auto px-4 py-3">
           <div className="grid grid-cols-2 md:grid-cols-3 items-center">
             {/* Left: Logo */}
@@ -54,26 +55,30 @@ export default function Home() {
                 <div className="relative h-10 w-10 md:h-12 md:w-12">
                   <Image src="/logo.png" alt="Passa Bola Logo" fill className="object-contain" />
                 </div>
-                <span className="font-bold text-xl text-primary">PASSA BOLA</span>
+                <span className="font-bold text-xl text-primary dark:text-primary-foreground">PASSA BOLA</span>
               </Link>
             </div>
 
             {/* Center: Desktop Navigation */}
             <nav className="hidden md:flex items-center justify-center space-x-8">
-              <Link onClick={handleSmoothScroll} href="#home" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Home<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
-              <Link onClick={handleSmoothScroll} href="#jogue" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Jogue com a gente<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
-              <Link onClick={handleSmoothScroll} href="#duvidas" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Dúvidas<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
-              <Link onClick={handleSmoothScroll} href="#contato" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Contato<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
-              <Link onClick={handleSmoothScroll} href="#quem-somos" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors relative group whitespace-nowrap">Quem somos<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
+              <Link onClick={handleSmoothScroll} href="#home" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-foreground transition-colors relative group whitespace-nowrap">Home<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
+              <Link onClick={handleSmoothScroll} href="#jogue" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-foreground transition-colors relative group whitespace-nowrap">Jogue com a gente<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
+              <Link onClick={handleSmoothScroll} href="#duvidas" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-foreground transition-colors relative group whitespace-nowrap">Dúvidas<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
+              <Link onClick={handleSmoothScroll} href="#contato" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-foreground transition-colors relative group whitespace-nowrap">Contato<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
+              <Link onClick={handleSmoothScroll} href="#quem-somos" className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-foreground transition-colors relative group whitespace-nowrap">Quem somos<span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span></Link>
             </nav>
 
             {/* Right: Actions (Loja on Desktop, Menu on Mobile) */}
-            <div className="flex justify-end">
+            <div className="flex justify-end items-center gap-2">
                 {/* Desktop Store Link */}
-                <Link onClick={handleSmoothScroll} href="#loja" className="hidden md:flex items-center gap-1 text-primary hover:text-pink-500 transition-colors">
+                <Link onClick={handleSmoothScroll} href="#loja" className="hidden md:flex items-center gap-1 text-primary dark:text-primary-foreground hover:text-pink-500 dark:hover:text-pink-400 transition-colors">
                     <ShoppingBag className="h-5 w-5" />
                     <span className="text-sm font-medium">Loja</span>
                 </Link>
+                
+                {/* Theme Toggle Button */}
+                <ThemeToggleButton />
+
                 {/* Mobile Menu Trigger - positioned at the far right */}
                 <div className="md:hidden flex items-center">
                     <MobileMenu />
