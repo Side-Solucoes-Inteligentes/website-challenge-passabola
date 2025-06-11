@@ -38,7 +38,7 @@ export default function Home() {
       {/* Header */}
       <header className="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b">
         <div className="container mx-auto px-4 py-3">
-          <div className="grid grid-cols-3 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 items-center">
             {/* Left: Logo */}
             <div className="flex justify-start">
               <Link href="#home" className="flex items-center gap-2">
