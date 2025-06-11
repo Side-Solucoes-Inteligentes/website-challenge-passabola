@@ -65,8 +65,8 @@ export default function Home() {
                     <ShoppingBag className="h-5 w-5" />
                     <span className="text-sm font-medium">Loja</span>
                 </Link>
-                {/* Mobile Menu Trigger - now explicitly on the right */}
-                <div className="md:hidden flex justify-end w-full">
+                {/* Mobile Menu Trigger - positioned at the far right */}
+                <div className="md:hidden flex items-center ml-auto">
                     <MobileMenu />
                 </div>
             </div>
@@ -88,7 +88,7 @@ export default function Home() {
     loop
     playsInline
   >
-    <source src="/futebol.mp4" type="video/mp4" />
+    <source src="/futebol.webm" type="video/webm" />
     Seu navegador não suporta vídeo em background.
   </video>
   <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent"></div>
