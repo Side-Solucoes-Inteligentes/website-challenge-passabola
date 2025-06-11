@@ -55,7 +55,7 @@ export default function Home() {
                 <div className="relative h-10 w-10 md:h-12 md:w-12">
                   <Image src="/logo.png" alt="Passa Bola Logo" fill className="object-contain" />
                 </div>
-                <span className="font-bold text-xl text-primary dark:text-primary-foreground">PASSA BOLA</span>
+                <span className="font-bold text-xl text-primary dark:text-white">PASSA BOLA</span>
               </Link>
             </div>
 
@@ -732,15 +732,15 @@ export default function Home() {
         </section>
 
         {/* CTA Final */}
-        <section className="py-24 bg-accent">
+        <section className="py-24 bg-accent dark:bg-slate-800">
           <div className="container mx-auto px-4 text-center">
             <ScrollAnimation>
               <h2
-                className={`${bebasNeue.className} text-3xl md:text-5xl font-bold text-primary mb-6 tracking-wider`}
+                className={`${bebasNeue.className} text-3xl md:text-5xl font-bold text-primary dark:text-white mb-6 tracking-wider`}
               >
                 PRONTA PARA FAZER HISTÓRIA NO CAMPO?
               </h2>
-              <p className="text-primary/80 max-w-2xl mx-auto mb-8">
+              <p className="text-primary/80 dark:text-gray-300 max-w-2xl mx-auto mb-8">
                 Inscreva seu time agora e faça parte da maior revolução do futebol feminino. Juntas somos mais fortes!
               </p>
               <Button className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 transition-transform hover:scale-105">
@@ -753,7 +753,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground pt-16 pb-8">
+      <footer className="bg-primary dark:bg-slate-900 text-primary-foreground dark:text-white pt-16 pb-8">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
             <div>
@@ -761,30 +761,30 @@ export default function Home() {
                 <div className="relative h-12 w-12">
                   <Image src="/logo.png" alt="Passa Bola Logo" fill className="object-contain" />
                 </div>
-                <span className="font-bold text-xl">PASSA BOLA</span>
+                <span className="font-bold text-xl text-white">PASSA BOLA</span>
               </div>
-              <p className="text-primary-foreground/80 mb-6">
+              <p className="text-primary-foreground/80 dark:text-gray-300 mb-6">
                 Um movimento pela igualdade no esporte. Promovendo o futebol feminino e criando espaços seguros e
                 inclusivos para todas.
               </p>
               <div className="flex space-x-4">
                 <Link
                   href="#"
-                  className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors"
+                  className="bg-white/10 dark:bg-white/20 p-2 rounded-full hover:bg-white/20 dark:hover:bg-white/30 transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram className="h-4 w-4" />
                 </Link>
                 <Link
                   href="#"
-                  className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors"
+                  className="bg-white/10 dark:bg-white/20 p-2 rounded-full hover:bg-white/20 dark:hover:bg-white/30 transition-colors"
                   aria-label="Twitter"
                 >
                   <Twitter className="h-4 w-4" />
                 </Link>
                 <Link
                   href="#"
-                  className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors"
+                  className="bg-white/10 dark:bg-white/20 p-2 rounded-full hover:bg-white/20 dark:hover:bg-white/30 transition-colors"
                   aria-label="Facebook"
                 >
                   <Facebook className="h-4 w-4" />
@@ -793,12 +793,12 @@ export default function Home() {
             </div>
 
             <div>
-              <h3 className="font-bold text-lg mb-6 tracking-wider">Links Rápidos</h3>
+              <h3 className="font-bold text-lg mb-6 tracking-wider text-white">Links Rápidos</h3>
               <ul className="space-y-3">
                 <li>
                   <Link
                     href="#home"
-                    className="text-primary-foreground/80 hover:text-white transition-colors hover:pl-1"
+                    className="text-primary-foreground/80 dark:text-gray-300 hover:text-white transition-colors hover:pl-1"
                   >
                     Home
                   </Link>
@@ -806,7 +806,7 @@ export default function Home() {
                 <li>
                   <Link
                     href="#jogue"
-                    className="text-primary-foreground/80 hover:text-white transition-colors hover:pl-1"
+                    className="text-primary-foreground/80 dark:text-gray-300 hover:text-white transition-colors hover:pl-1"
                   >
                     Jogue com a gente
                   </Link>
@@ -814,7 +814,7 @@ export default function Home() {
                 <li>
                   <Link
                     href="#duvidas"
-                    className="text-primary-foreground/80 hover:text-white transition-colors hover:pl-1"
+                    className="text-primary-foreground/80 dark:text-gray-300 hover:text-white transition-colors hover:pl-1"
                   >
                     Dúvidas
                   </Link>
@@ -822,7 +822,7 @@ export default function Home() {
                 <li>
                   <Link
                     href="#contato"
-                    className="text-primary-foreground/80 hover:text-white transition-colors hover:pl-1"
+                    className="text-primary-foreground/80 dark:text-gray-300 hover:text-white transition-colors hover:pl-1"
                   >
                     Contato
                   </Link>
@@ -830,7 +830,7 @@ export default function Home() {
                 <li>
                   <Link
                     href="#quem-somos"
-                    className="text-primary-foreground/80 hover:text-white transition-colors hover:pl-1"
+                    className="text-primary-foreground/80 dark:text-gray-300 hover:text-white transition-colors hover:pl-1"
                   >
                     Quem somos
                   </Link>
@@ -838,7 +838,7 @@ export default function Home() {
                 <li>
                   <Link
                     href="#loja"
-                    className="text-primary-foreground/80 hover:text-white transition-colors hover:pl-1"
+                    className="text-primary-foreground/80 dark:text-gray-300 hover:text-white transition-colors hover:pl-1"
                   >
                     Loja
                   </Link>
@@ -847,35 +847,35 @@ export default function Home() {
             </div>
 
             <div>
-              <h3 className="font-bold text-lg mb-6 tracking-wider">Informações</h3>
+              <h3 className="font-bold text-lg mb-6 tracking-wider text-white">Informações</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link href="#" className="text-primary-foreground/80 hover:text-white transition-colors hover:pl-1">
+                  <Link href="#" className="text-primary-foreground/80 dark:text-gray-300 hover:text-white transition-colors hover:pl-1">
                     Regulamento
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-primary-foreground/80 hover:text-white transition-colors hover:pl-1">
+                  <Link href="#" className="text-primary-foreground/80 dark:text-gray-300 hover:text-white transition-colors hover:pl-1">
                     Código de Conduta
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-primary-foreground/80 hover:text-white transition-colors hover:pl-1">
+                  <Link href="#" className="text-primary-foreground/80 dark:text-gray-300 hover:text-white transition-colors hover:pl-1">
                     Política de Privacidade
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-primary-foreground/80 hover:text-white transition-colors hover:pl-1">
+                  <Link href="#" className="text-primary-foreground/80 dark:text-gray-300 hover:text-white transition-colors hover:pl-1">
                     Termos de Uso
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-primary-foreground/80 hover:text-white transition-colors hover:pl-1">
+                  <Link href="#" className="text-primary-foreground/80 dark:text-gray-300 hover:text-white transition-colors hover:pl-1">
                     Trabalhe Conosco
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-primary-foreground/80 hover:text-white transition-colors hover:pl-1">
+                  <Link href="#" className="text-primary-foreground/80 dark:text-gray-300 hover:text-white transition-colors hover:pl-1">
                     Imprensa
                   </Link>
                 </li>
@@ -883,26 +883,26 @@ export default function Home() {
             </div>
 
             <div>
-              <h3 className="font-bold text-lg mb-6 tracking-wider">Newsletter</h3>
-              <p className="text-primary-foreground/80 mb-4">
+              <h3 className="font-bold text-lg mb-6 tracking-wider text-white">Newsletter</h3>
+              <p className="text-primary-foreground/80 dark:text-gray-300 mb-4">
                 Inscreva-se para receber novidades, datas de jogos e conteúdos exclusivos.
               </p>
               <div className="flex">
                 <input
                   type="email"
                   placeholder="Seu e-mail"
-                  className="flex-1 px-3 py-2 text-black rounded-l-md focus:outline-none focus:ring-2 focus:ring-accent"
+                  className="flex-1 px-3 py-2 text-black dark:text-white dark:bg-slate-700 dark:border-slate-600 rounded-l-md focus:outline-none focus:ring-2 focus:ring-accent"
                 />
-                <Button className="rounded-l-none bg-accent hover:bg-accent/90 text-primary">Assinar</Button>
+                <Button className="rounded-l-none bg-accent hover:bg-accent/90 text-primary dark:text-white">Assinar</Button>
               </div>
             </div>
           </div>
 
-          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-primary-foreground/80 text-sm">
+          <div className="border-t border-white/10 dark:border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-primary-foreground/80 dark:text-gray-300 text-sm">
               &copy; {new Date().getFullYear()} Copa Passa Bola. Todos os direitos reservados.
             </p>
-            <p className="text-primary-foreground/80 text-sm mt-4 md:mt-0">Feito com 💜 por mulheres, para mulheres.</p>
+            <p className="text-primary-foreground/80 dark:text-gray-300 text-sm mt-4 md:mt-0">Feito com 💜 por mulheres, para mulheres.</p>
           </div>
         </div>
       </footer>
