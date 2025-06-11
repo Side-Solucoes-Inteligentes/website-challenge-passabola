@@ -105,7 +105,7 @@ export default function Home() {
     <source src="/futebol.mp4" type="video/mp4" />
     Seu navegador não suporta vídeo em background.
   </video>
-  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent"></div>
+  <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent dark:from-primary/70 dark:via-primary/40"></div>
 </div>
 
           <div className="container mx-auto px-4 relative z-10">
@@ -142,7 +142,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
-                <Button className="bg-white text-primary hover:bg-white/90 text-base px-8 py-6 transition-transform hover:scale-105">
+                <Button className="bg-white text-primary hover:bg-white/90 dark:bg-slate-100 dark:text-primary dark:hover:bg-slate-200 text-base px-8 py-6 transition-transform hover:scale-105">
                   INSCREVA SEU TIME
                   <ChevronRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -161,39 +161,39 @@ export default function Home() {
         </section>
 
         {/* Sobre o Torneio */}
-        <section id="quem-somos" className="py-20 bg-white">
+        <section id="quem-somos" className="py-20 bg-white dark:bg-slate-900">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <ScrollAnimation>
                 <div>
                   <Badge className="bg-pink-500 text-white mb-4 hover:bg-pink-600">QUEM SOMOS</Badge>
                   <h2
-                    className={`${bebasNeue.className} text-3xl md:text-4xl font-bold text-[#8e44ad] mb-6 tracking-wider`}
+                    className={`${bebasNeue.className} text-3xl md:text-4xl font-bold text-[#8e44ad] dark:text-primary mb-6 tracking-wider`}
                   >
                     UM MOVIMENTO PELA IGUALDADE NO ESPORTE
                   </h2>
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-700 dark:text-gray-300 mb-6">
                     A Copa Passa Bola nasceu da necessidade de criar um espaço seguro e inclusivo para mulheres no
                     futebol. Fundada em 2020 por um grupo de atletas e ativistas, nosso torneio vai além da competição – é
                     um movimento de resistência e celebração.
                   </p>
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-gray-700 dark:text-gray-300 mb-6">
                     Acreditamos que o esporte é uma poderosa ferramenta de transformação social. Por isso, trabalhamos
                     para quebrar estereótipos, combater o preconceito e abrir portas para todas as mulheres que desejam
                     jogar futebol, independente de sua orientação sexual, identidade de gênero, raça ou classe social.
                   </p>
                   <div className="flex flex-wrap gap-6 mb-6">
                     <div className="flex items-center gap-2">
-                      <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                      <div className="h-12 w-12 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary">
                         <Users className="h-6 w-6" />
                       </div>
                       <div>
                         <div className="font-bold text-xl text-primary">500+</div>
-                        <div className="text-sm text-gray-600">Atletas participantes</div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400">Atletas participantes</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                      <div className="h-12 w-12 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -218,11 +218,11 @@ export default function Home() {
                       </div>
                       <div>
                         <div className="font-bold text-xl text-primary">5</div>
-                        <div className="text-sm text-gray-600">Edições realizadas</div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400">Edições realizadas</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                      <div className="h-12 w-12 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -245,7 +245,7 @@ export default function Home() {
                       </div>
                       <div>
                         <div className="font-bold text-xl text-primary">32</div>
-                        <div className="text-sm text-gray-600">Times participantes</div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400">Times participantes</div>
                       </div>
                     </div>
                   </div>
@@ -265,7 +265,7 @@ export default function Home() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg max-w-xs">
+                  <div className="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-lg max-w-xs">
                     <div className="flex items-start gap-3">
                       <div className="text-[#c2ff28] mt-1">
                         <svg
@@ -285,11 +285,11 @@ export default function Home() {
                         </svg>
                       </div>
                       <div>
-                        <p className="text-gray-700 text-sm italic">
+                        <p className="text-gray-700 dark:text-gray-300 text-sm italic">
                           "A Copa Passa Bola mudou minha vida. Aqui encontrei não só um espaço para jogar, mas uma
                           comunidade que me acolheu e me fortaleceu."
                         </p>
-                        <p className="text-[#8e44ad] font-medium mt-2">Mariana Silva, Capitã do Fúria FC</p>
+                        <p className="text-[#8e44ad] dark:text-primary font-medium mt-2">Mariana Silva, Capitã do Fúria FC</p>
                       </div>
                     </div>
                   </div>
@@ -300,14 +300,14 @@ export default function Home() {
         </section>
 
         {/* Jogue com a gente */}
-        <section id="jogue" className="py-20 bg-gradient-to-b from-white to-transparent aurora">
+        <section id="jogue" className="py-20 bg-gradient-to-b from-white to-transparent dark:from-slate-900 dark:to-transparent aurora">
           <div className="container mx-auto px-4">
             <ScrollAnimation className="text-center max-w-3xl mx-auto mb-16">
               <Badge className="bg-pink-500 text-white mb-4 hover:bg-pink-600">JOGUE COM A GENTE</Badge>
-              <h2 className={`${bebasNeue.className} text-3xl md:text-5xl font-bold text-[#8e44ad] mb-6 tracking-wider`}>
+              <h2 className={`${bebasNeue.className} text-3xl md:text-5xl font-bold text-[#8e44ad] dark:text-primary mb-6 tracking-wider`}>
                 FAÇA PARTE DESSE MOVIMENTO
               </h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-gray-300">
                 Inscreva seu time na Copa Passa Bola e faça parte de um movimento que está transformando o futebol
                 feminino no Brasil. Não importa se você é iniciante ou experiente, aqui tem espaço para todas.
               </p>
@@ -386,14 +386,14 @@ export default function Home() {
                 },
               ].map((card, index) => (
                 <ScrollAnimation key={index} delay={index * 0.1}>
-                  <Card className="overflow-hidden border-none shadow-lg h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                  <Card className="overflow-hidden border-none shadow-lg h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 dark:bg-slate-800/80 dark:hover:bg-slate-800">
                     <div className="h-2 bg-accent"></div>
                     <CardContent className="pt-6 px-6 flex-grow">
-                      <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+                      <div className="h-14 w-14 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary mb-6">
                         {card.icon}
                       </div>
                       <h3 className="text-xl font-bold text-primary mb-3">{card.title}</h3>
-                      <p className="text-gray-600 mb-6">{card.description}</p>
+                      <p className="text-gray-600 dark:text-gray-400 mb-6">{card.description}</p>
                     </CardContent>
                     <CardFooter className="px-6 pb-6 mt-auto">
                       <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground transition-transform hover:scale-105">
@@ -409,14 +409,14 @@ export default function Home() {
         </section>
 
         {/* Merchandise/Loja */}
-        <section id="loja" className="py-20 bg-white">
+        <section id="loja" className="py-20 bg-white dark:bg-slate-900">
           <div className="container mx-auto px-4">
             <ScrollAnimation className="text-center max-w-3xl mx-auto mb-16">
               <Badge className="bg-pink-500 text-white mb-4 hover:bg-pink-600">LOJA OFICIAL</Badge>
-              <h2 className={`${bebasNeue.className} text-3xl md:text-5xl font-bold text-[#8e44ad] mb-6 tracking-wider`}>
+              <h2 className={`${bebasNeue.className} text-3xl md:text-5xl font-bold text-[#8e44ad] dark:text-primary mb-6 tracking-wider`}>
                 VISTA A NOSSA CAUSA
               </h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-gray-300">
                 Cada produto adquirido na nossa loja ajuda a financiar os projetos da Copa Passa Bola e a promover o
                 futebol feminino. Além disso, você leva para casa peças exclusivas e cheias de significado.
               </p>
@@ -436,10 +436,10 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <ScrollAnimation className="text-center max-w-3xl mx-auto mb-16">
               <Badge className="bg-pink-500 text-white mb-4 hover:bg-pink-600">DEPOIMENTOS</Badge>
-              <h2 className={`${bebasNeue.className} text-3xl md:text-5xl font-bold text-[#8e44ad] mb-6 tracking-wider`}>
+              <h2 className={`${bebasNeue.className} text-3xl md:text-5xl font-bold text-[#8e44ad] dark:text-primary mb-6 tracking-wider`}>
                 O QUE DIZEM SOBRE NÓS
               </h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-gray-300">
                 Conheça as histórias de quem já faz parte da nossa comunidade e como a Copa Passa Bola tem transformado
                 vidas através do esporte.
               </p>
@@ -470,7 +470,7 @@ export default function Home() {
                 },
               ].map((testimonial, index) => (
                 <ScrollAnimation key={index} delay={index * 0.1}>
-                  <Card className="bg-white/80 backdrop-blur-sm border-none shadow-md p-6 h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                  <Card className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm border-none shadow-md p-6 h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
                     <CardContent className="p-0 mb-6 flex-grow">
                       <div className="text-accent mb-4">
                         <svg
@@ -489,7 +489,7 @@ export default function Home() {
                           <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
                         </svg>
                       </div>
-                      <p className="text-gray-700 italic">{testimonial.quote}</p>
+                      <p className="text-gray-700 dark:text-gray-300 italic">{testimonial.quote}</p>
                     </CardContent>
                     <CardFooter className="p-0 flex items-center gap-4 mt-auto">
                       <div className="relative h-12 w-12 rounded-full overflow-hidden">
@@ -501,8 +501,8 @@ export default function Home() {
                         />
                       </div>
                       <div>
-                        <h4 className="font-bold text-[#8e44ad]">{testimonial.name}</h4>
-                        <p className="text-sm text-gray-600">{testimonial.role}</p>
+                        <h4 className="font-bold text-[#8e44ad] dark:text-primary">{testimonial.name}</h4>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">{testimonial.role}</p>
                       </div>
                     </CardFooter>
                   </Card>
@@ -513,14 +513,14 @@ export default function Home() {
         </section>
 
         {/* Dúvidas Frequentes */}
-        <section id="duvidas" className="py-20 bg-white">
+        <section id="duvidas" className="py-20 bg-white dark:bg-slate-900">
           <div className="container mx-auto px-4">
             <ScrollAnimation className="text-center max-w-3xl mx-auto mb-16">
               <Badge className="bg-pink-500 text-white mb-4 hover:bg-pink-600">DÚVIDAS FREQUENTES</Badge>
-              <h2 className={`${bebasNeue.className} text-3xl md:text-5xl font-bold text-[#8e44ad] mb-6 tracking-wider`}>
+              <h2 className={`${bebasNeue.className} text-3xl md:text-5xl font-bold text-[#8e44ad] dark:text-primary mb-6 tracking-wider`}>
                 TUDO O QUE VOCÊ PRECISA SABER
               </h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-gray-300">
                 Encontre respostas para as perguntas mais comuns sobre a Copa Passa Bola, inscrições, regras e muito
                 mais.
               </p>
@@ -555,19 +555,19 @@ export default function Home() {
                 },
               ].map((faq, index) => (
                 <ScrollAnimation key={index} delay={index * 0.1}>
-                  <div className="mb-6 border-b border-gray-200 pb-6 last:border-0">
-                    <h3 className="text-xl font-bold text-[#8e44ad] mb-3 flex items-center">
+                  <div className="mb-6 border-b border-gray-200 dark:border-gray-800 pb-6 last:border-0">
+                    <h3 className="text-xl font-bold text-[#8e44ad] dark:text-primary mb-3 flex items-center">
                       <span className="mr-3 text-[#c2ff28]">Q.</span>
                       {faq.question}
                     </h3>
-                    <p className="text-gray-700 pl-7">{faq.answer}</p>
+                    <p className="text-gray-700 dark:text-gray-300 pl-7">{faq.answer}</p>
                   </div>
                 </ScrollAnimation>
               ))}
             </div>
 
             <ScrollAnimation className="text-center mt-12" delay={0.5}>
-              <p className="text-gray-700 mb-4">Não encontrou o que procurava?</p>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">Não encontrou o que procurava?</p>
               <Button className="bg-[#8e44ad] hover:bg-[#9b59b6] text-white">
                 ENTRE EM CONTATO
                 <MessageCircle className="ml-2 h-4 w-4" />
@@ -681,45 +681,45 @@ export default function Home() {
                   <form className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label htmlFor="name" className="text-sm font-medium text-gray-700">
+                        <label htmlFor="name" className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           Nome
                         </label>
                         <input
                           id="name"
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-900"
+                          className="w-full px-3 py-2 border border-gray-300 dark:border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-900 dark:text-gray-50 dark:bg-slate-800"
                           placeholder="Seu nome"
                         />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-medium text-gray-700">
+                        <label htmlFor="email" className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           Email
                         </label>
                         <input
                           id="email"
                           type="email"
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-900"
+                          className="w-full px-3 py-2 border border-gray-300 dark:border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-900 dark:text-gray-50 dark:bg-slate-800"
                           placeholder="Seu email"
                         />
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="subject" className="text-sm font-medium text-gray-700">
+                      <label htmlFor="subject" className="text-sm font-medium text-gray-700 dark:text-gray-300">
                         Assunto
                       </label>
                       <input
                         id="subject"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-900"
+                        className="w-full px-3 py-2 border border-gray-300 dark:border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-900 dark:text-gray-50 dark:bg-slate-800"
                         placeholder="Assunto da mensagem"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium text-gray-700">
+                      <label htmlFor="message" className="text-sm font-medium text-gray-700 dark:text-gray-300">
                         Mensagem
                       </label>
                       <textarea
                         id="message"
                         rows={4}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-900"
+                        className="w-full px-3 py-2 border border-gray-300 dark:border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary text-gray-900 dark:text-gray-50 dark:bg-slate-800"
                         placeholder="Sua mensagem"
                       ></textarea>
                     </div>
@@ -984,8 +984,8 @@ function ProductCarousel() {
         ].map((product, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4 p-4">
             <ScrollAnimation delay={index * 0.1} className="h-full">
-              <Card className="group border-none shadow-md h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                <div className="relative aspect-square bg-primary/5">
+              <Card className="group border-none shadow-md h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 dark:bg-slate-800">
+                <div className="relative aspect-square bg-primary/5 dark:bg-slate-700/50">
                   <Image
                     src={product.image || "/placeholder.svg"}
                     alt={product.name}
@@ -1000,14 +1000,14 @@ function ProductCarousel() {
                   <Button
                     variant="secondary"
                     size="icon"
-                    className="absolute top-3 right-3 bg-white/80 hover:bg-white text-primary rounded-full h-8 w-8"
+                    className="absolute top-3 right-3 bg-white/80 hover:bg-white text-primary rounded-full h-8 w-8 dark:bg-slate-700/80 dark:hover:bg-slate-700"
                   >
                     <Heart className="h-4 w-4" />
                     <span className="sr-only">Adicionar aos favoritos</span>
                   </Button>
                 </div>
                 <CardContent className="p-4 flex-grow">
-                  <h3 className="font-medium text-gray-900 group-hover:text-primary transition-colors">
+                  <h3 className="font-medium text-gray-900 dark:text-gray-50 group-hover:text-primary transition-colors">
                     {product.name}
                   </h3>
                   <div className="flex justify-between items-center mt-2">
