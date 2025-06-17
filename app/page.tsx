@@ -991,6 +991,7 @@ function ProductCarousel() {
                     alt={product.name}
                     fill
                     className="object-contain p-4 transition-transform group-hover:scale-105"
+                    unoptimized
                   />
                   {product.badge && (
                     <Badge className="absolute top-3 left-3 bg-primary hover:bg-primary/90">
